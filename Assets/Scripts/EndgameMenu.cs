@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartMenu : MonoBehaviour
+public class EndgameMenu : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private Button _startButton;
-    [SerializeField] private Button _exitButton;
+    [SerializeField] private Button _yesButton;
+    [SerializeField] private Button _noButton;
 
     #endregion
 
@@ -15,8 +15,8 @@ public class StartMenu : MonoBehaviour
 
     private void Start()
     {
-        _startButton.onClick.AddListener(StartGame);
-        _exitButton.onClick.AddListener(ExitGame);
+        _yesButton.onClick.AddListener(StartGame);
+        _noButton.onClick.AddListener(ExitGame);
     }
 
     #endregion
@@ -30,7 +30,7 @@ public class StartMenu : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene("Game Scene");
+        SceneManager.LoadScene("Start Scene");
     }
 
     #endregion
